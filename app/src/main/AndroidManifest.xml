@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.sanikakulkarni.learningforkids" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher1"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".StartLearning"
+            android:label="@string/title_activity_start_learning"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.sanikakulkarni.learningforkids.MainActivity" />
+        </activity>
+        <activity
+            android:name=".LearnB"
+            android:label="@string/title_activity_learn_b"
+            android:parentActivityName=".StartLearning" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.sanikakulkarni.learningforkids.StartLearning" />
+        </activity>
+        <activity
+            android:name=".LearnC"
+            android:label="@string/title_activity_learn_c"
+            android:parentActivityName=".LearnB" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.sanikakulkarni.learningforkids.LearnB" />
+        </activity>
+        <activity
+            android:name=".LearnD"
+            android:label="@string/title_activity_learn_d"
+            android:parentActivityName=".LearnC" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.sanikakulkarni.learningforkids.LearnC" />
+        </activity>
+        <activity
+            android:name=".LearnE"
+            android:label="@string/title_activity_learn_e"
+            android:parentActivityName=".LearnD" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.sanikakulkarni.learningforkids.LearnD" />
+        </activity>
+        <activity
+            android:name=".Test"
+            android:label="@string/title_activity_test"
+            android:parentActivityName=".LearnE" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.sanikakulkarni.learningforkids.LearnE" />
+        </activity>
+    </application>
+
+</manifest>
